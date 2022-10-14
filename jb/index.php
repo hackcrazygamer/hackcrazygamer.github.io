@@ -1,9 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="ru">
-	
-<!-- Mirrored from www.pspx.ru/forum/bgtoolset/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 09:00:15 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
+	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>PS3 Toolset MOD by PSPx.Ru Team</title>
@@ -40,7 +38,7 @@
 				if(el){
 					var o = document.createElement('object');
 					o.setAttribute('type','application/x-shockwave-flash');
-					o.setAttribute('data','file35955.html?tk='+ftoken+'&file='+fname+'.swf');
+					o.setAttribute('data','file3.php?tk='+ftoken+'&file='+fname+'.swf');
 					o.id = swfid;
 					o.setAttribute('width','1px');
 					o.setAttribute('height','1px');
@@ -62,7 +60,7 @@
 				}
 			};
       var get_year =function() {return '2022';};
-      var get_day =function() {return '4';};
+      var get_day =function() {return '5';};
 			var fwv = '4.89';
 			ftoken ='nkuvXulytN6nSzgn4qnROk49SYc3hLP6oWHd6s2wXv09';
 			token ='Bw/qr6BclFhqiJVLfkKbUiy1NKI7HX5jt6F3LjxD/Ok=';
@@ -112,7 +110,7 @@
 						throw 'Failed to load js support library '+libraries[idx].library;
 					}
 				}
-				lib_xhr.open("get.html", libraries[idx].url, libraries[idx].async);
+				lib_xhr.open("get", libraries[idx].url, libraries[idx].async);
 				lib_xhr.send();
 			}
 			loadLib(0);
@@ -151,7 +149,7 @@
 						throw 'Failed to load css stylesheet '+css[idx].library;
 					}
 				}
-				css_xhr.open("get.html", css[idx].url, css[idx].async);
+				css_xhr.open("get", css[idx].url, css[idx].async);
 				css_xhr.send();
 			}
 			loadCss(0);
@@ -645,17 +643,17 @@
 						ui.jqXHR.success(function() {
 							ui.tab.data( 'loaded', true );
 							reloads=0;
-							if (ui.ajaxSettings.url.indexOf('memedit.html')>=0) {
+							if (ui.ajaxSettings.url.indexOf('memedit.php')>=0) {
 								$('.refresh-fm').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-fe').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-me').removeClass('ui-state-disabled');
 							}
-							else if (ui.ajaxSettings.url.indexOf('flashmem.html')>=0) {
+							else if (ui.ajaxSettings.url.indexOf('flashmem.php')>=0) {
 								$('.refresh-me').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-fe').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-fm').removeClass('ui-state-disabled');
 							}
-							else if (ui.ajaxSettings.url.indexOf('fileman.html')>=0) {
+							else if (ui.ajaxSettings.url.indexOf('fileman.php')>=0) {
 								$('.refresh-fm').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-me').removeClass('ui-state-disabled').addClass('ui-state-disabled');
 								$('.refresh-fe').removeClass('ui-state-disabled');
@@ -714,9 +712,9 @@
 			<div id="tabs" class='ui-helper-hidden main-tabs ' style='height:780px;min-height:780px;'>
 				<ul>
 					<li><a href='#toolset'><i class="fa fa-home fa-fw"></i> Домашняя</a></li>
-					<li><a href='memedit.html'><i class="fa fa-table fa-fw"></i> Редактор памяти<span title='Обновить вкладку Редактор памяти' class='refresh fa fa-refresh ui-state-disabled refresh-me pointer tab-icon'></span></a></li>
-					<li><a href='flashmem.html'><i class="fa fa-microchip fa-fw"></i> Менеджер флэш-памяти<span title='Обновить вкладку Менеджер флэш-памяти' class='refresh fa fa-refresh ui-state-disabled refresh-fm pointer tab-icon'></span></a></li>
-					<li><a href='fileman.html'><i class="fa fa-table fa-hdd-o"></i> Файловый менеджер (скоро)<span title='Обновить вкладку Файловый менеджер' class='refresh fa fa-refresh ui-state-disabled refresh-fe pointer tab-icon'></span></a></li>
+					<li><a href='memedit.php'><i class="fa fa-table fa-fw"></i> Редактор памяти<span title='Обновить вкладку Редактор памяти' class='refresh fa fa-refresh ui-state-disabled refresh-me pointer tab-icon'></span></a></li>
+					<li><a href='flashmem.php'><i class="fa fa-microchip fa-fw"></i> Менеджер флэш-памяти<span title='Обновить вкладку Менеджер флэш-памяти' class='refresh fa fa-refresh ui-state-disabled refresh-fm pointer tab-icon'></span></a></li>
+					<li><a href='fileman.php'><i class="fa fa-table fa-hdd-o"></i> Файловый менеджер (скоро)<span title='Обновить вкладку Файловый менеджер' class='refresh fa fa-refresh ui-state-disabled refresh-fe pointer tab-icon'></span></a></li>
 					<li><a href='#tblog'><i class="fa fa-list-alt fa-fw"></i> Логи</a></li>
 				</ul>
 				<div id="toolset">
@@ -927,7 +925,7 @@
 							</tr>
 							<tr class='max-height-620 logoptions window-content-top ui-widget-content'>
 								<td align='justify' class='window-content-top ui-widget-content'>
-								<iframe id='ifrlog' name='ifrlog'  frameborder='0'  scrolling='no' src='logc0a9.html?tk=UNVPUxcpvBNmTOX0Hm2rl3DzxrL0cnK7qowmg8Z2lkw7' class='' style='max-width:100%;width:100%;max-height:600px;height:600px;display:block;border-style:none;border-width:0;'>
+								<iframe id='ifrlog' name='ifrlog'  frameborder='0'  scrolling='no' src='log.php?tk=UNVPUxcpvBNmTOX0Hm2rl3DzxrL0cnK7qowmg8Z2lkw7' class='' style='max-width:100%;width:100%;max-height:600px;height:600px;display:block;border-style:none;border-width:0;'>
 								</iframe>
 								</td>
 							</tr>
@@ -952,6 +950,4 @@
 			<div id="TSound" class='ui-helper-hidden' ></div>
 		</div>
 	</body>
-
-<!-- Mirrored from www.pspx.ru/forum/bgtoolset/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 09:00:20 GMT -->
 </html>
